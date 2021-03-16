@@ -1,0 +1,14 @@
+#asm:
+asm/*/*.o
+asm/*/*.elf
+asm/*/*.out
+
+#c:
+c/*/*.o
+c/*/*.S
+c/*/*.out
+
+#cpp:
+cpp/*/*.o
+cpp/*/*.S
+cpp/*/*.out
