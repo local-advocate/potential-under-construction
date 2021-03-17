@@ -3,8 +3,8 @@ global _start
 ; static/global
 section .data
 
-; one byte
 
+; byte operations
 bone db "a", 1001b, "b", 0Ah	; db = declare byte (referred by variable bone and value is "a")
 len1 equ 4                      ; length (in bytes)
 
@@ -16,6 +16,8 @@ len2 equ 3
 
 bfr db "ha",  0xA
 len4 equ 3
+
+; .short, .long, .string
  	
 section .text
 
