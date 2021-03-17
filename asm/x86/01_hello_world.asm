@@ -7,7 +7,7 @@ global _start
 
 section .data
 	message: db "Hello World", 0xA  ; newline 
-	msg_lng equ $-message
+	msg_lng equ $-message 		; $ = current address
  
 section .text
 
