@@ -7,3 +7,4 @@ x86 refs: http://www.cs.virginia.edu/~evans/cs216/guides/x86.htmlhttp://www.cs.v
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
 oracle: https://docs.oracle.com/cd/E19641-01/802-1948/802-1948.pdf
+https://www.nasm.us/doc/nasmdoc0.html
