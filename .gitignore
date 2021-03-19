@@ -4,6 +4,8 @@ asm/*/*.elf
 asm/*/*.out
 
 #c:
+c/*.o
+c/*.out
 c/*/*.o
 c/*/*.S
 c/*/*.out
