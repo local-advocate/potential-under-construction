@@ -4,8 +4,8 @@ asm/*/*.elf
 asm/*/*.out
 
 #c:
-c/*.o
-c/*.out
+c/obj.o
+c/exec.out
 c/*/*.o
 c/*/*.S
 c/*/*.out
