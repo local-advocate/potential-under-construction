@@ -11,4 +11,4 @@ shell:
 
 
 other:
-gdb, make, objdump, hexdump
+gdb, make, objdump, hexdump, git, vim
