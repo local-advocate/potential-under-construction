@@ -10,6 +10,7 @@ do
 	i=$(( i+1 ))			# $i+1 string op. 
 done
 
+
 # -----------FOR---------------
 echo "FOR LOOP (python)"		# {start..end..step}
 for i in {0..10..2}
@@ -20,5 +21,15 @@ done
 echo "FOR LOOP (c)"
 for (( i=0; i<=10; i++ ))
 do
-	echo $i
+
+	if [ $i -gt 4 ]
+	then
+		break
+	else
+		echo $i
+		continue		# redundant (jumps back to loop not go next)
+	fi
+
+	echo "will never get executed"
+
 done
