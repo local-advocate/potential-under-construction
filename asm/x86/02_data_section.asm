@@ -5,7 +5,7 @@ global _start
 
 section .data 					; user for constant data 
 
-prompt db   "Enter you name: "			; db = declare byte
+prompt db   "Enter you name: "			; db = declare byte, dw = word (2byte), DWORD = 4 bytes
 len1   equ  $ - prompt                    	; length (in bytes)
 
 respon db   "Your name is "
