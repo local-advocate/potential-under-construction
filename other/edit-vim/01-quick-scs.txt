@@ -1,0 +1,5 @@
+yt: https://www.youtube.com/watch?v=XA2WjJbmmoM
+
+
+-  indent		:	> or <		{ <current | [x]k curr+xUP | xDOWN            }
+-  inner		:	i		{ wORD     | tAG           | "quotes   | pARA }

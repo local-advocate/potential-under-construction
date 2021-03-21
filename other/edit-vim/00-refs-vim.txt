@@ -1,0 +1,3 @@
+yt: https://www.youtube.com/watch?v=wlR5gYd6um0
+yt: https://www.youtube.com/watch?v=XA2WjJbmmoM
+how do i get help in vim w/o online
