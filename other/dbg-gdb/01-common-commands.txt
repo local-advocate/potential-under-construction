@@ -1,5 +1,16 @@
 * Common Commands
 
+- break <point>		: break at a fuction or a line
+
+=> NAVIGATE
+-  next or n		: go to next line
+-  step or s 		: step into a function 
+
+=> PRINT
+-  print <var>		: print value of current <var>
+-  print result@x	: print result (use of x?)
+
 => TUI:
-- layout next		: view other code 				// for c code 
-- layout asm		: view assembly code				// for assembly code
+-  layout next		: view other code 				// for c code 
+-  layout asm		: view assembly code				// for assembly code
+-  refresh		: refresh layout
