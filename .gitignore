@@ -1,3 +1,6 @@
+#vim
+.swp
+
 #asm:
 asm/*/*.o
 asm/*/*.elf
