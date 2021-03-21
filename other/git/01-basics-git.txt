@@ -16,7 +16,6 @@ ref : https://git-scm.com/book/en/v2
 
 => COMMITING
 - skip stage		:	git commit -a -m "message"	(commits all unstaged files)
-- 
 
 => REMOVE
 - w/ staging		: 	git rm <file>			(use -f for removing staged files [no snap])
