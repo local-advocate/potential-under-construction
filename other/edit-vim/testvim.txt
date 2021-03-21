@@ -1,0 +1,7 @@
+<this is inside a para>
+"this is inside a quote"
+
+	this is just a para
+	which needs to be indented
+
+search search for a a string string in this sentence

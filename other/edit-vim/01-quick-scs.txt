@@ -1,5 +1,15 @@
 yt: https://www.youtube.com/watch?v=XA2WjJbmmoM
 
+-  change	        :       c		{ f/t[char] | /[pattern]     | i[inner]   |      }
 
--  indent		:	> or <		{ <current | [x]k curr+xUP | xDOWN            }
--  inner		:	i		{ wORD     | tAG           | "quotes   | pARA }
+-  indent		:	> or <		{ <current  | [x]k curr+xUP  | xDOWN             }
+-  inner		:	i		{ wORD      | tAG            | "quotes    | pARA }
+-  find and replace	:	/		{ text					         }	
+
+* COMMANDS
+- :set number		:	number for lines
+- :set relativenumber	:	sets relative number around line
+- :set smartindent	:	smart indent
+
+* PLUGINS
+
