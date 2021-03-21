@@ -1,0 +1,26 @@
+cont: https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository (commiting)
+ref : https://git-scm.com/book/en/v2
+
+* BASIC
+
+=> STAGING
+- stage			:	git add <file>
+- see staged    	:	git status 
+- unstage		:	git restore --staged <file>	(ignore  staged changes)
+- ignore staged		:	git reset <file>		(ignores staged file)
+
+=> CHANGES
+- modified !stg		:       git diff
+- to be committed	:       git diff --staged/--cached 	(compares staged to last commit)
+- visual		: 	git difftool --tool-help 	(for running commercial tools)
+
+=> COMMITING
+- skip stage		:	git commit -a -m "message"	(commits all unstaged files)
+- 
+
+=> REMOVE
+- w/ staging		: 	git rm <file>			(use -f for removing staged files [no snap])
+- rm staged		:	git rm --cached <file>		(only works if working dir <file> unmodified)
+- rename		:	git mv <file>			(eqv mv <f1> <f2>, git rm <f1>, git add <f2>)
+
+* gitignore: man gitignore
