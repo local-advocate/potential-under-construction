@@ -1,0 +1,5 @@
+* Common Commands
+
+=> TUI:
+- layout next		: view other code 				// for c code 
+- layout asm		: view assembly code				// for assembly code
