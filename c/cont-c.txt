@@ -1,0 +1,1 @@
+cont: pg 29 file:///home/kali/Downloads/papers/c.pdf
