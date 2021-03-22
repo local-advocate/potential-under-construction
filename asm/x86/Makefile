@@ -5,7 +5,7 @@ f01 = "01_hello_world.asm"
 f02 = "02_data_section.asm"
 f03 = "03_addressing.asm"
 
-curr = $(f02)
+curr = $(f03)
 
 exec: 
 	nasm -f elf32 -o obj.o $(curr)

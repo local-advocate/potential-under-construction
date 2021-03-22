@@ -9,3 +9,6 @@ http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 oracle: https://docs.oracle.com/cd/E19641-01/802-1948/802-1948.pdf
 https://www.nasm.us/doc/nasmdoc0.html
 https://www.tutorialspoint.com/assembly_programming/assembly_system_calls.htm
+
+cont: https://www.tutorialspoint.com/assembly_programming/assembly_variables.htm
+debug: https://mohit.io/blog/gdb-assembly-language-debugging-101/ 
