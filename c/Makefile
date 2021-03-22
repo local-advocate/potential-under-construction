@@ -6,9 +6,13 @@ f1 = "01-preproc.c"
 curr = $(f1)
 
 exec:  
-	gcc $(f1) -c -o obj.o
+	gcc $(curr) -c -o obj.o
 	gcc obj.o -o exec.out
 	./exec.out
+	
+debug:
+	gcc $(curr) -g -o debug-exec.out
+	./debug-exec.out
 
 clean:
 	rm ./*.o

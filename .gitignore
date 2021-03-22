@@ -1,6 +1,11 @@
 #vim
 *.swp
 
+#exec
+*.out
+*.o
+*.elf
+
 #asm:
 asm/*/*.o
 asm/*/*.elf

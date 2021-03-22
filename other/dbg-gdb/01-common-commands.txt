@@ -29,7 +29,7 @@
 -  print *array@x	: print whole dereferenced array (x = size)	// w/o * for mem addresses
 -  print array[x]	: print value of array at index x
 -  display <var>	: print <var> after every command		// undisplay <varID> how see varid
--  watch <var>		: print <var> anytime its value changes
+-  watch <var>		: print <var> anytime its value changes		// how filter all? how see $*?
 -  what <var>		: prints type of <var>				// whatis or what
 -  list or l <line>	: prints code lines around current one
 -  backtrace or bt	: print the entire callstack unitl now
