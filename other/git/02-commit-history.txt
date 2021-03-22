@@ -1,1 +1,28 @@
 ref: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+
+* git log (reverse chronological)
+
+=> OPTIONS
+>  -[number]			:	info for last [number] commits 
+>  -p or --patch		:	show difference introduced in each commit	
+>  --stat			: 	quick stats about commits 
+>  --name-only			:	names of files modified after commit
+>  -- <path to file>		:	shows commits in <path to file/dir>
+>  -S <str>			:	shows changes to <str>
+>  --author=[name]		:	filter commits based on [name]
+>  --grep			: 	all grep patterns
+>  --since=<format>		:	format include n.[weeks|months|years] or specific or relative date
+>  --unitl/before/after		:	same as --since (can be used together)
+>  --graph			:	show graph of merge and branch
+
+
+=> PRETTIFY
+>  --pretty=[option]		: 	[option] 
+					short, full, fuller (commit id, author, date)
+					oneline (only commit id and commit comment)
+					format:"%specifiers"
+
+>  --pretty=format:"%sps"	:	commit hash -- %H  (abbreviated -- %h )
+					author name -- %an (email       -- %ae) (date     --  %ad)
+					committer   -- %cn (email       -- %cn) (relative --  %ar)
+					subject	    -- %s  (comment onn commit)	
