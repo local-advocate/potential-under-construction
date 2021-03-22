@@ -1,3 +1,3 @@
-cont: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+cont: https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
 ref : https://git-scm.com/book/en/v2
 
