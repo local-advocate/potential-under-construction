@@ -13,8 +13,8 @@
 => BREAKPOINTS (b)
 -  break <point>	: break at a fuction or a line
 -  clear <point>	: clears a break point
--  info breakpoints	: print all breakpoints
--  delete <breakID>	: deletes the breakpoint with breakID		// delete all: i b
+-  info breakpoints	: print all breakpoints				// i b
+-  delete <breakID>	: deletes the breakpoint with breakID		// delete all: delete
 -  how to break at first err?
 
 => NAVIGATE
