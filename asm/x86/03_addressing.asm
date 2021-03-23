@@ -43,7 +43,7 @@ _start:
 	; learned from https://www.daniweb.com/programming/software-development/threads/488646/how-to-print-array-in-nasm
 	print_arr:	
 
-		mov ecx, [esi]				; ecx = first element of array
+		mov ecx, DWORD [esi]			; ecx = first element of array
 		add ecx, 48				; to convert from int to ascii (cant print int)
 		push ecx				; push ecx to get address of ascii (for print syscall)
 		mov ecx, esp				; address of ascii
