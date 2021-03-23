@@ -13,6 +13,16 @@ rpnln  equ  $ - respon
 
 newline db 0xA
 
+; var-name  define-directive   value
+  abyte		db		'a'		; declare 1 byte
+  aword		dw		'ab'		; declare 1 word (2 bytes)
+  adobw		dd		2000123		; declare 1 doubleword (4 bytes)
+  aquad		dq		111.99		; declare 1 quadword (8 bytes)
+  atenb		dt		8391123.111	; declare 1 tenbyte  (10 bytes)
+
+intarr TIMES 10 dd 0				; array of 10 integers initialized to zero
+intarrstr db "int arr: "
+intarrstrlen equ $ - intarrstr
 
 ;---------------bss-------------------------
 
@@ -20,6 +30,11 @@ section .bss  					; user for variables/uninitialized data
 
 input  resb 100					; reserve 100 bytes 
 
+byter  resb 1					; reserve 1 byte
+bytew  resw 1					; reserve 1 word
+byted  resd 1					; reserve 1 doubleword
+byteq  resq 1					; reserve 1 quadword
+bytet  rest 1					; reserve 1 tenbyte
 
 ;----------------text----------------------
  	
@@ -55,17 +70,29 @@ _start:
 		mov edx, 100
 		int 0x80
 	
+
+	; print_something:			; add later macro/call to library func
+	;	mov eax, 0x04
+	;	mov ebx, 1
+	;	int 0x80
+		
+	print_intarr:
+		mov eax, 0x04
+		mov ebx, 1
+		mov ecx, intarrstr
+		mov edx, intarrstrlen
+		int 0x80		
+
+		mov ecx, intarr
+		mov edx, 4 
+		int 0x80
+		
 	print_newline:
 		mov eax, 0x04
 		mov ebx, 1
 		mov ecx, newline
 		mov edx, 1
 		int 0x80	
-
-	; print_something:			; add later macro/call to library func
-	;	mov eax, 0x04
-	;	mov ebx, 1
-	;	int 0x80
 		
 
 	exit:			
