@@ -1,8 +1,11 @@
 how to restore a commit version?
+reset command
 
 COMMITS:
 - git commit --amend		:	replaces previous commit with files in current staging area
 					only amend local commits (not pushed anywhere)
 
 STAGING:
-
+- unstage			: 	git reset HEAD <file>:w
+					git restore --staged <file>
+- ignore working		:	git restore <file>
