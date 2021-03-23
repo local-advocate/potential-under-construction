@@ -1,0 +1,4 @@
+mainly used for version 
+
+LIST:
+- git tag [-l or --list] "tag+regex"		:	lists tags with given string and regex
