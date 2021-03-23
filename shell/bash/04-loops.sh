@@ -27,7 +27,6 @@ do
 		break
 	else
 		echo $i
-		continue		# redundant (jumps back to loop not go next)
 	fi
 
 	echo "will never get executed"
