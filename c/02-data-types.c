@@ -34,24 +34,52 @@ int main(){
 	 */
 	
 	printf("--------common data types--------\n");
-	printf("TYPE\t\t\tSIZE\t\t\tVALUE\n\n");
+	printf("TYPE\t\t\tSIZE\t\t\tVALUE\t\t\tSPECIFIER\n\n");
 	
 	char c = 'c';		// 1 byte
+	
 	int i  = -10;		// 4 bytes  machine dependent use sizeof(int) to confirm
+	unsigned int ui = -10;
+	
 	float f;		// 
+
 	double d;
+	long double ld;
 
-	printf("char:\t\t\t%d\t\t\t%c\n", sizeof(char), c);
-	printf("int :\t\t\t%d\t\t\t%d\n", sizeof(int),  i);
-//	printf("char:\t\t\t%d\t\t\t%c\n", sizeof(char), c);
-//	printf("char:\t\t\t%d\t\t\t%c\n", sizeof(char), c);
+	short s;
+	unsigned short sui;
 
+	long l;
+	unsigned long ul;
+	long long ll;
+	unsigned long long ull;
+
+	char *str = "hi";
+
+
+	printf("char:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char), c, "\t%s\n\n");
+	printf("int:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(int)    , i, "\t%s\n");
+	printf("uint:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char), c, "\t%s\n\n");
+	printf("float:\t\t\t %d\t\t\t %c\t\t  %s",  sizeof(char), c, "\t%s\n");
+	printf("float:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char),c, "\t%s\n\n");
+	printf("double:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),  i, "\t%s\n");
+	printf("ldouble:\t\t %d\t\t\t %d\t\t  %s", sizeof(int), c, "\t%s\n\n");
+	printf("short:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),   i, "\t%s\n");
+	printf("ushort:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),c, "\t%s\n\n");
+	printf("long:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),    i, "\t%s\n");
+	printf("ulong:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),   i, "\t%s\n");
+	printf("llong:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),   i, "\t%s\n");
+	printf("ullong:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),i, "\t%s\n\n");
+	printf("str:\t\t\t %d\t\t\t %d\t\t %s", sizeof(int),   i, "\t%s\n\n");
+	printf("pointer:\t\t %d \t\t\t %d", sizeof(int),       i, "\t%s\n\n");
+			
+			
 			
 
 	/*----OTHER INT TYPES----*/	// (x in 8, 16, 32, 64). for scanning change PRI to SCN
 
 	printf("\n\n--------other int types--------\n");
-	printf("TYPE\t\t\tMIN\t\t\tMAX\n\n");
+	printf("TYPE\t\t\tMIN\t\t\tMAX\t\t\n\n");
 		
 	/*
 	 * --unsigned or signed (abs size)--
