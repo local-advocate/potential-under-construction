@@ -1,4 +1,31 @@
-mainly used for version 
+* TAGGING: mainly used for version 
 
-LIST:
-- git tag [-l or --list] "tag+regex"		:	lists tags with given string and regex
+=> TYPES:
+-  lightweight					: 	like a branch that doesn't change 
+							pointer to a specific commit
+-  annotated					:	full objects with all metadata
+
+
+=> LIST:
+-  git tag [-l or --list] "tag+regex"		:	lists tags with given string and regex
+-  git show <tag>				:	show all metadata associated with the <tag>
+
+
+=> ADDING TAGS:
+-  lightweight					:	git tag <tag>
+-  annotated					: 	git tag -a <tag> -m "message"
+-  tagging afterwards				:	git tag [options] <tag> {commit hash}
+
+
+=> SHARING TAGS: (not pushed by default)
+-  git push <name> <tag>				:	pushes <tag> to <shortname>
+-  git push <name> --tags			:	pushes every tag to <shortname>
+-  git push <name> --follow-tags			:	only pushes every annotated (no opt for only lw)
+
+
+=> DELETING:
+-  git tag -d <tag>				:	deletes tag on local repo
+-  git push <name> --delete <tag>		:	deletes tag from remote repo
+
+
+=> CHECKING OUT: https://git-scm.com/book/en/v2/Git-Basics-Tagging
