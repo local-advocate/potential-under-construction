@@ -2,3 +2,11 @@ https://www.youtube.com/watch?v=e7BufAVwDiM
 https://www.gnu.org/software/bash/manual/bash.pdf
 bracket ref: https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/
 tldp: https://tldp.org/LDP/abs/html/index.html
+
+command 1 && command 2			:		command 2 executed only if command 1 success
+command 1 || command 2			"		command 2 executed only if command 1 return != 0 (success)
+
+(( arithmetic expression ))		:		return 0 if expression non-zero, else 1
+
+[[ logical    expression ]]		:		return 0 or 1 
+- == or !=				:		test for strind pattern match (0 if match)
