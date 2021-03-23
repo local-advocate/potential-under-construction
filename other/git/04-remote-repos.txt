@@ -1,12 +1,24 @@
 git clone vs git fetch vs git pull
+what does set upstream do?
+HEAD branch??
 
 INFO:
 - git remote [-v]			:	shows name/urls of configured remote servers
+- git remote show <remote>		:	more pull/push info about remote
 
 
 ADDING:
 - git remote add <shortname> <url>	: 	add remote <url> that can be reference by <shortname>
+- git remote rename <name> <rename>	:	renames remote shortname
+
+
+REMOVING:
+- git remote remove <shortname>		: 	all references, branches and config settigs removed with remote
 
 
 FETCH:
 - git fetch <shortname>			:	pulls all data from <shortname>	[doesn't merge automatically]
+
+
+PUSH:
+- git push <remote/shortname> <branch>	:	pushes staged changes to <remote> repo's <branch>
