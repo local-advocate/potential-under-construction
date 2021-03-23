@@ -10,5 +10,5 @@ oracle: https://docs.oracle.com/cd/E19641-01/802-1948/802-1948.pdf
 https://www.nasm.us/doc/nasmdoc0.html
 https://www.tutorialspoint.com/assembly_programming/assembly_system_calls.htm
 
-cont: https://www.tutorialspoint.com/assembly_programming/assembly_variables.htm
+cont: https://www.tutorialspoint.com/assembly_programming/assembly_arithmetic_instructions.htm
 debug: https://mohit.io/blog/gdb-assembly-language-debugging-101/ 
