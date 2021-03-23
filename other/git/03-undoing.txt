@@ -1,0 +1,8 @@
+how to restore a commit version?
+
+COMMITS:
+- git commit --amend		:	replaces previous commit with files in current staging area
+					only amend local commits (not pushed anywhere)
+
+STAGING:
+
