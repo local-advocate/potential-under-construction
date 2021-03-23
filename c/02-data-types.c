@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <unistd.h>		// ref: https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_71/rtref/stdinth.htm
 #include <inttypes.h>		// ref: https://debrouxl.github.io/gcc4ti/inttypes.html
+#include <stddef.h>		// for size_t and ptrdiff_t and wchar_t
+#include <wchar.h>		// for wint_t and wchar_t
 
 int main(){
+
+	/*----OTHER INT TYPES----*/	// (x in 8, 16, 32, 64). for scanning change PRI to SCN
+
 	printf("TYPE\t\t\tMIN\t\t\tMAX\n\n");
-
-	/*----INT TYPES----*/	// (x in 8, 16, 32, 64).
-
 		
 	/*
 	 * --unsigned or signed (abs size)--
@@ -74,4 +76,21 @@ int main(){
 	
 	printf("uintptr_t:\t\t%" PRIuPTR "\t\t\t%" PRIuPTR "\n", 0, UINTPTR_MAX); 
 	printf("intptr   :\t\t%" PRIdPTR "\t%" PRIiPTR "\n\n", INTPTR_MIN, INTPTR_MAX); 
+
+
+	/*
+	 * max integers 
+	 * MACROS:
+	 * 	unsigned: MAX: UINTMAX_MAX. 
+	 * 	signed  : MIN:  INTMAX_MIN. MAX:  INTMAX_MAX. 
+	 *
+	 * SPECIFIER:
+	 * 	%PRIu64 to print uintmax_t as unsigned 
+	 * 	%PRId64 to print intmax_t or uintptr_t as signed dec int (%lld not portable)	
+	 */
+	uintmax_t  intmaxu; intmax_t intmaxs;
+	
+	printf("uintmax_t:\t\t%" PRIu64 "\t\t\t%" PRIu64 "\n", 0, UINTMAX_MAX); 
+	printf("intmax_t :\t\t%" PRId64 "\t%" PRId64 "\n\n", INTMAX_MIN, INTMAX_MAX); 
+	
 }
