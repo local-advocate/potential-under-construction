@@ -1,0 +1,12 @@
+git clone vs git fetch vs git pull
+
+INFO:
+- git remote [-v]			:	shows name/urls of configured remote servers
+
+
+ADDING:
+- git remote add <shortname> <url>	: 	add remote <url> that can be reference by <shortname>
+
+
+FETCH:
+- git fetch <shortname>			:	pulls all data from <shortname>	[doesn't merge automatically]
