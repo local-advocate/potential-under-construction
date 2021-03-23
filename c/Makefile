@@ -1,9 +1,9 @@
 f1 = "01-preproc.c" 
-# f2 = 
+f2 = "02-data-types.c"
 # f3 = 
 # f4 = 
 
-curr = $(f1)
+curr = $(f2)
 
 exec:  
 	gcc $(curr) -c -o obj.o
