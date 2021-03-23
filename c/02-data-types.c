@@ -5,9 +5,52 @@
 #include <wchar.h>		// for wint_t and wchar_t
 
 int main(){
+	
+	/*----COMMON C TYPES----*/
+
+	/*
+	 * SPECIFIERS : https://www.tutorialspoint.com/format-specifiers-in-c (reference)
+     	 * 	%c	Character
+	 *	%d	Signed integer
+	 *	%e or %E	Scientific notation of floats
+	 *	%f	Float values
+	 *	%g or %G	Similar as %e or %E
+	 *	%hi	Signed integer (short)
+	 *	%hu	Unsigned Integer (short)
+	 *	%i	Unsigned integer
+	 *	%l or %ld or %li	Long
+	 *	%lf	Double
+	 *	%Lf	Long double
+	 *	%lu	Unsigned int or unsigned long
+	 *	%lli or %lld	Long long
+	 *	%llu	Unsigned long long
+	 *	%o	Octal representation
+	 *	%p	Pointer
+	 *	%s	String
+	 *	%u	Unsigned int
+	 *	%x or %X	Hexadecimal representation
+	 *	%n	Prints nothing
+	 *	%%	Prints % character
+	 */
+	
+	printf("--------common data types--------\n");
+	printf("TYPE\t\t\tSIZE\t\t\tVALUE\n\n");
+	
+	char c = 'c';		// 1 byte
+	int i  = -10;		// 4 bytes  machine dependent use sizeof(int) to confirm
+	float f;		// 
+	double d;
+
+	printf("char:\t\t\t%d\t\t\t%c\n", sizeof(char), c);
+	printf("int :\t\t\t%d\t\t\t%d\n", sizeof(int),  i);
+//	printf("char:\t\t\t%d\t\t\t%c\n", sizeof(char), c);
+//	printf("char:\t\t\t%d\t\t\t%c\n", sizeof(char), c);
+
+			
 
 	/*----OTHER INT TYPES----*/	// (x in 8, 16, 32, 64). for scanning change PRI to SCN
 
+	printf("\n\n--------other int types--------\n");
 	printf("TYPE\t\t\tMIN\t\t\tMAX\n\n");
 		
 	/*
