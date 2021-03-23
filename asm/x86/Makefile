@@ -3,7 +3,8 @@
 
 f01 = "01_hello_world.asm"
 f02 = "02_data_section.asm"
-f03 = "03_addressing.asm"
+f03 = "03_nasm_directives.asm"
+f04 = "04_addressing.asm"
 
 curr = $(f03)
 
