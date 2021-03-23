@@ -10,6 +10,7 @@ ref : https://git-scm.com/book/en/v2
 - ignore staged		:	git reset <file>		(ignores staged file)
 
 => CHANGES
+- ignore working	:	git restore <file>		(ignore changes in working directory)
 - modified !stg		:       git diff
 - to be committed	:       git diff --staged/--cached 	(compares staged to last commit)
 - visual		: 	git difftool --tool-help 	(for running commercial tools)

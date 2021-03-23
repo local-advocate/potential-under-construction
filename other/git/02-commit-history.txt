@@ -6,7 +6,7 @@ ref: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 >  -[number]			:	info for last [number] commits 
 >  -p or --patch		:	show difference introduced in each commit	
 >  --stat			: 	quick stats about commits 
->  --name-only			:	names of files modified after commit
+>  --name-only			:	names of files modified after commit	//--name-stat for file names
 >  -- <path to file>		:	shows commits in <path to file/dir>
 >  -S <str>			:	shows changes to <str>
 >  --author=[name]		:	filter commits based on [name]
