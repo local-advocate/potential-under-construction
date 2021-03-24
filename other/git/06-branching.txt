@@ -1,5 +1,6 @@
 CREATING:
 - git branch <bname>			:	HEAD ptr doesnt point to new branch automatically
+- git checkout -b <bname>		: 	create branch <bname> and switch to it
 
 SWITCH:
 - git checkout <bname>			:	HEAD ptr moves to branch <bname>
