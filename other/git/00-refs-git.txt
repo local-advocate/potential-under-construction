@@ -1,3 +1,3 @@
-cont: https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell#ch03-git-branching
+cont: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 ref : https://git-scm.com/book/en/v2
 

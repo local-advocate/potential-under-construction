@@ -2,10 +2,22 @@ CREATING:
 - git branch <bname>			:	HEAD ptr doesnt point to new branch automatically
 - git checkout -b <bname>		: 	create branch <bname> and switch to it
 
-SWITCH:
+
+SWITCH: (cant switch without committing or stashing?)
 - git checkout <bname>			:	HEAD ptr moves to branch <bname>
+- git switch <bname>			:	switch to <bname>
+- git switch -				: 	switch to previous checked out branch
+
 
 INFO:
 - git branch				: 	shows all branches
 - git branch --show-current		: 	shows current branch
 - git log <bname>			:	shows log including <bname> (git log --all also works)
+
+
+MERGING:
+- git checkout <b>; git merge <bname>   :	first checkout to branch. merge other branch to current one.
+
+
+DELETING:
+- git branch -d <bname>			: 	deltes branch ptr
