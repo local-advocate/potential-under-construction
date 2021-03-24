@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include "03-qualifiers.h"		// declaration of extint1
+
+int extint1 = 99;			// definition of extint1 (accessible by any file that declare it)
 
 int main(){
 
@@ -12,7 +15,6 @@ int main(){
 
 
 	/*----data----*/
-       
 
 	/* (see 02-data-types.c for signed, unsigned, short, long, long long) */
 	int temp1 = 0;
@@ -38,15 +40,24 @@ int main(){
 	// VOLATILE
 
 
-
-	// AUTO
-
-
+	/* 
+	 * EXTERN (see global vars) [global variables from other file can't be accessed without extern dec]
+	 * - used to tell linker that variable is defined somewhere else (globally)
+	 * - declaration (extern int x) usually done in header file
+	 * - definition (int x = f) done in one file only	
+	 */
+	//extern int extint1;			// declared in "03-qualifiers.h". defined in this file.
+	printextern();				// declared in "03-qualifiers.h". defined in 03-extern-test.c
 	
-	// EXTERN
-	
 
-	
 	// REGISTER
+	
+
+	/*
+	 * AUTO
+	 * - mainly kept due to backwards compatibality
+	 * - used to declare variable with function (local to it) [var destroyed when out of scope]
+	 * - done automatically in c though, so no use 
+	 */  
 }
 
