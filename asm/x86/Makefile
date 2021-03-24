@@ -5,8 +5,10 @@ f01 = "01_hello_world.asm"
 f02 = "02_data_section.asm"
 f03 = "03_nasm_directives.asm"
 f04 = "04_addressing.asm"
+f05 = "05_loops_and_math.asm"
+tmp = "temp.asm"
 
-curr = $(f03)
+curr = $(f05)
 
 exec: 
 	nasm -f elf32 -o obj.o $(curr)
