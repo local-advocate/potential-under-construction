@@ -44,18 +44,18 @@ int main(){
 	char c = 'c';		// 1 byte
 	
 	int i  = -10;		// 4 bytes  machine dependent use sizeof(int) to confirm
-	unsigned int ui = 10;
+	unsigned int ui = 10u;
 	
-	float f = 2.77;		// 
+	float f = 2.77f;		// 
 
-	double d = 1.882772;
-	long double ld = 0.0002132411;
+	double d = 1.882772d;
+	long double ld = 0.0002132411L;
 
 	short s = -32;
 	unsigned short sui = 2;
 
-	long l = -1800;
-	unsigned long ul = 341;
+	long l = -1800l;
+	unsigned long ul = 341uL;
 	long long ll = -9999;
 	unsigned long long ull = 828;
 
