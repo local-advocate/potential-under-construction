@@ -16,10 +16,9 @@ section .text
 
 _start:
 
-
 inc_loop:
 	cmp byte [counter], 10
-	je  exit
+	je  inc_loop_end
 
 	mov eax, 4
 	mov ebx, 1
@@ -35,7 +34,41 @@ inc_loop:
 	inc byte  [counter]
 	jmp inc_loop
 
+inc_loop_end:
+	dec byte [counter]
+
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, newline
+	mov edx, 1
+	int 0x80	
+
+
 dec_loop:
+	cmp byte [counter], -1
+	je  dec_loop_end
+
+	mov eax, 4
+	mov ebx, 1
+
+	mov ecx,  [counter]
+	add ecx, 48
+	mov  [value], ecx
+	mov ecx, value
+
+	mov edx, 1
+	int 0x80
+
+	dec byte [counter]
+	jmp dec_loop
+
+dec_loop_end:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, newline
+	mov edx, 1
+	int 0x80	
+
 
 arr_loop:
 
