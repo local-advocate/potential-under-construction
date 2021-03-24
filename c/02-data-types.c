@@ -7,12 +7,15 @@
 #include <float.h>		// max and min for floats and doubles
 
 int main(){
+
+	/*----COMPILE AND EXECUTE FOR BETTER FORMAT----*/
 	
 	/*----COMMON C TYPES----*/
 
 	/*
 	 * SPECIFIERS : https://www.tutorialspoint.com/format-specifiers-in-c (reference)
-     	 * 	%c		Character
+	 * 	General:	%x.ys (x = +right/-left align, y = after point or total chars, s = specifier)
+     	 * 	%c		Character			
 	 *	%d		Signed integer
 	 *	%e or %E	Scientific notation of floats
 	 *	%f		Float values
@@ -56,8 +59,7 @@ int main(){
 	long long ll = -9999;
 	unsigned long long ull = 828;
 
-	char *str = "hi";
-
+	char *str = "hiDONTPRINTTHIS";
 
 	printf("char:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char), c, "\t%c\n\n");
 	printf("int:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int)    , i, "\t%d\n");
@@ -65,15 +67,15 @@ int main(){
 	printf("float:\t\t\t %d\t\t\t %f\t  %s",  sizeof(float), f, "\t%f\n");
 	printf("float:\t\t\t %d\t\t\t %e\t  %s", sizeof(float),f, "\t%e or %E\n\n");
 	printf("double:\t\t\t %d\t\t\t %lf\t  %s", sizeof(double),  d, "\t%lf\n");
-	printf("ldouble:\t\t %d\t\t\t %Lf\t  %s", sizeof(long double), ld, "\t%Lf\n\n");
+	printf("ldouble:\t\t %d\t\t\t %.6Lf\t  %s", sizeof(long double), ld, "\t%Lf\n\n");
 	printf("short:\t\t\t %d\t\t\t %hi\t\t  %s", sizeof(short),   s, "\t%hi\n");
 	printf("ushort:\t\t\t %d\t\t\t %hu\t\t  %s", sizeof(unsigned short),sui, "\t%hu\n\n");
 	printf("long:\t\t\t %d\t\t\t  %ld\t\t  %s", sizeof(long),    l, "\t%li, %ld, %l\n");
 	printf("ulong:\t\t\t %d\t\t\t %lu\t \t %s", sizeof(unsigned long),   ul, "\t%lu\n");
 	printf("llong:\t\t\t %d\t\t\t %lli\t\t  %s", sizeof(long long),   ll, "\t%lli or %lld\n");
 	printf("ullong:\t\t\t %d\t\t\t %llu\t  %s", sizeof(unsigned long long),i, "\t%llu\n\n");
-	printf("str:\t\t\t %d\t\t\t %s\t\t %s", sizeof(char *),   str, "\t%s\n\n");
-	printf("pointer:\t\t %d \t\t\t %p\t%s", sizeof(char *),       i, "\t%p\n\n");
+	printf("str:\t\t\t %d\t\t\t %.2s\t\t %s", sizeof(char *),   str, "\t%s\n\n");
+	printf("pointer:\t\t %d \t\t\t %p\t%s", sizeof(char *),       str, "\t%p\n\n");
 			
 			
 			
