@@ -10,3 +10,7 @@ command 1 || command 2			"		command 2 executed only if command 1 return != 0 (su
 
 [[ logical    expression ]]		:		return 0 or 1 
 - == or !=				:		test for strind pattern match (0 if match)
+
+
+
+cont: https://tldp.org/LDP/abs/html/special-chars.html
