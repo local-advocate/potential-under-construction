@@ -3,6 +3,8 @@
 #include <inttypes.h>		// ref: https://debrouxl.github.io/gcc4ti/inttypes.html
 #include <stddef.h>		// for size_t and ptrdiff_t and wchar_t
 #include <wchar.h>		// for wint_t and wchar_t
+#include <limits.h>		// max and min for char/long/int 
+#include <float.h>		// max and min for floats and doubles
 
 int main(){
 	
@@ -10,27 +12,27 @@ int main(){
 
 	/*
 	 * SPECIFIERS : https://www.tutorialspoint.com/format-specifiers-in-c (reference)
-     	 * 	%c	Character
-	 *	%d	Signed integer
+     	 * 	%c		Character
+	 *	%d		Signed integer
 	 *	%e or %E	Scientific notation of floats
-	 *	%f	Float values
+	 *	%f		Float values
 	 *	%g or %G	Similar as %e or %E
-	 *	%hi	Signed integer (short)
-	 *	%hu	Unsigned Integer (short)
-	 *	%i	Unsigned integer
-	 *	%l or %ld or %li	Long
-	 *	%lf	Double
-	 *	%Lf	Long double
-	 *	%lu	Unsigned int or unsigned long
+	 *	%hi		Signed integer (short)
+	 *	%hu		Unsigned Integer (short)
+	 *	%i		Unsigned integer
+	 *	%l, %ld, %li	Long
+	 *	%lf		Double
+	 *	%Lf		Long double
+	 *	%lu		Unsigned int or unsigned long
 	 *	%lli or %lld	Long long
-	 *	%llu	Unsigned long long
-	 *	%o	Octal representation
-	 *	%p	Pointer
-	 *	%s	String
-	 *	%u	Unsigned int
+	 *	%llu		Unsigned long long
+	 *	%o		Octal representation
+	 *	%p		Pointer
+	 *	%s		String
+	 *	%u		Unsigned int
 	 *	%x or %X	Hexadecimal representation
-	 *	%n	Prints nothing
-	 *	%%	Prints % character
+	 *	%n		Prints nothing
+	 *	%%		Prints % character
 	 */
 	
 	printf("--------common data types--------\n");
@@ -39,39 +41,39 @@ int main(){
 	char c = 'c';		// 1 byte
 	
 	int i  = -10;		// 4 bytes  machine dependent use sizeof(int) to confirm
-	unsigned int ui = -10;
+	unsigned int ui = 10;
 	
-	float f;		// 
+	float f = 2.77;		// 
 
-	double d;
-	long double ld;
+	double d = 1.882772;
+	long double ld = 0.0002132411;
 
-	short s;
-	unsigned short sui;
+	short s = -32;
+	unsigned short sui = 2;
 
-	long l;
-	unsigned long ul;
-	long long ll;
-	unsigned long long ull;
+	long l = -1800;
+	unsigned long ul = 341;
+	long long ll = -9999;
+	unsigned long long ull = 828;
 
 	char *str = "hi";
 
 
-	printf("char:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char), c, "\t%s\n\n");
-	printf("int:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(int)    , i, "\t%s\n");
-	printf("uint:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char), c, "\t%s\n\n");
-	printf("float:\t\t\t %d\t\t\t %c\t\t  %s",  sizeof(char), c, "\t%s\n");
-	printf("float:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char),c, "\t%s\n\n");
-	printf("double:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),  i, "\t%s\n");
-	printf("ldouble:\t\t %d\t\t\t %d\t\t  %s", sizeof(int), c, "\t%s\n\n");
-	printf("short:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),   i, "\t%s\n");
-	printf("ushort:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),c, "\t%s\n\n");
-	printf("long:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),    i, "\t%s\n");
-	printf("ulong:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),   i, "\t%s\n");
-	printf("llong:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),   i, "\t%s\n");
-	printf("ullong:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int),i, "\t%s\n\n");
-	printf("str:\t\t\t %d\t\t\t %d\t\t %s", sizeof(int),   i, "\t%s\n\n");
-	printf("pointer:\t\t %d \t\t\t %d", sizeof(int),       i, "\t%s\n\n");
+	printf("char:\t\t\t %d\t\t\t %c\t\t  %s", sizeof(char), c, "\t%c\n\n");
+	printf("int:\t\t\t %d\t\t\t %d\t\t  %s", sizeof(int)    , i, "\t%d\n");
+	printf("uint:\t\t\t %d\t\t\t %i\t\t  %s", sizeof(unsigned int), ui, "\t%i\n\n");
+	printf("float:\t\t\t %d\t\t\t %f\t  %s",  sizeof(float), f, "\t%f\n");
+	printf("float:\t\t\t %d\t\t\t %e\t  %s", sizeof(float),f, "\t%e or %E\n\n");
+	printf("double:\t\t\t %d\t\t\t %lf\t  %s", sizeof(double),  d, "\t%lf\n");
+	printf("ldouble:\t\t %d\t\t\t %Lf\t  %s", sizeof(long double), ld, "\t%Lf\n\n");
+	printf("short:\t\t\t %d\t\t\t %hi\t\t  %s", sizeof(short),   s, "\t%hi\n");
+	printf("ushort:\t\t\t %d\t\t\t %hu\t\t  %s", sizeof(unsigned short),sui, "\t%hu\n\n");
+	printf("long:\t\t\t %d\t\t\t  %ld\t\t  %s", sizeof(long),    l, "\t%li, %ld, %l\n");
+	printf("ulong:\t\t\t %d\t\t\t %lu\t \t %s", sizeof(unsigned long),   ul, "\t%lu\n");
+	printf("llong:\t\t\t %d\t\t\t %lli\t\t  %s", sizeof(long long),   ll, "\t%lli or %lld\n");
+	printf("ullong:\t\t\t %d\t\t\t %llu\t  %s", sizeof(unsigned long long),i, "\t%llu\n\n");
+	printf("str:\t\t\t %d\t\t\t %s\t\t %s", sizeof(char *),   str, "\t%s\n\n");
+	printf("pointer:\t\t %d \t\t\t %p\t%s", sizeof(char *),       i, "\t%p\n\n");
 			
 			
 			
