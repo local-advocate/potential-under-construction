@@ -1,0 +1,10 @@
+CREATING:
+- git branch <bname>			:	HEAD ptr doesnt point to new branch automatically
+
+SWITCH:
+- git checkout <bname>			:	HEAD ptr moves to branch <bname>
+
+INFO:
+- git branch				: 	shows all branches
+- git branch --show-current		: 	shows current branch
+- git log <bname>			:	shows log including <bname> (git log --all also works)
