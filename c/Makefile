@@ -3,7 +3,15 @@ f2 = "02-data-types.c"
 f3 = "03-qualifiers.c" 
 # f4 = 
 
-curr = $(f3)
+curr = $(f2)
+
+f3:
+	gcc $(f3) 03-extern-test.c -o exec.out
+	./exec.out
+
+dbdf3:
+	gcc -g  $(f3) 03-extern-test.c -o exec.out
+	./exec.out
 
 exec:  
 	gcc $(curr) -c -o obj.o
