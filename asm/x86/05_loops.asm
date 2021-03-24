@@ -70,6 +70,7 @@ dec_loop_end:
 
 
 arr_loop:
+	; see 04_addressing.asm
 
 exit:
 ;	mov eax, 4
