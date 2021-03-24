@@ -27,6 +27,7 @@ do
 		break
 	else
 		echo $i
+		continue		# jump back to loop
 	fi
 
 	echo "will never get executed"
