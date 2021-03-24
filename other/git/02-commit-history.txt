@@ -15,6 +15,7 @@ ref: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 >  --unitl/before/after		:	same as --since (can be used together)
 >  --graph			:	show graph of merge and branch
 >   unpushed			:	git log origin/master..HEAD	(git diff origin/master..HEAD for diff)
+					git log --branches --not --remotes
 
 
 => PRETTIFY
