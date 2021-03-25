@@ -1,13 +1,24 @@
 #include <stdio.h>
 
-enum arrtype  {INT, CHAR, DOUBLE};
+enum arrtype {INT, CHAR, DOUBLE};
 
-void print1darr(void *p, int size, int type){
-	switch(type){
+void print1darr (int *p, int size, int type){
+	switch(type) {
+
 		case INT:
-			p = (int *) p;
-			printf("in int\n");
+			for (int i =0; i < size; i++) {
+				printf("int-arr[%d]: %d\t", i, *(p+i));
+			}
+			printf("\n");
 			break;
+
+		case DOUBLE:
+			for (int i =0; i < size; i++) {
+				printf("double-arr[%d]: %lf\t", i, *(p+i));
+			}
+			printf("\n");
+			break;
+
 	}
 }
 
@@ -23,6 +34,7 @@ int main(){
 
 
 	print1darr(intarr, sizeof(intarr)/sizeof(int), INT);
+	print1darr(doubarr, sizeof(doubarr)/sizeof(double), DOUBLE);
 
 
 }
