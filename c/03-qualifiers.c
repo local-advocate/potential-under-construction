@@ -4,7 +4,7 @@
 int extint1 = 99;			// definition of extint1 (accessible by any file that declare it)
 
 
-static inline int inlfunc2(){		// inline function used later
+__attribute((always_inline))static inline int inlfunc2(){		// inline function used later
 	return -2;
 }
 
@@ -125,6 +125,12 @@ int main(){
 	__attribute((always_inline))inline int inlfunc1(){
 		return -1;
 	}
+
+	/*
+	 * inline int inlfunc3(){		// preferred over extern 
+	 *	return -33;
+	 *	}
+	 */
 
 	// from assembly file only __attribute((a_i)) get inlined
 	printf("inline function returned: %d\n", inlfunc1());		// will substitue instead of calling
