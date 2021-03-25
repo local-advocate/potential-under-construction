@@ -3,6 +3,12 @@
 
 int extint1 = 99;			// definition of extint1 (accessible by any file that declare it)
 
+
+static inline int inlfunc2(){		// inline function used later
+	return -2;
+}
+
+
 int main(){
 
 	/*
@@ -116,6 +122,14 @@ int main(){
 	 *
 	 * extern inline:
 	 */
+	__attribute((always_inline))inline int inlfunc1(){
+		return -1;
+	}
+
+	// from assembly file only __attribute((a_i)) get inlined
+	printf("inline function returned: %d\n", inlfunc1());		// will substitue instead of calling
+	printf("static inline function returned: %d\n", inlfunc2());	// will call inlfunc2
+	printf("extern inline function returned: %d\n", inlfunc3()); 	// declared in header defined in test
 
 }
 
