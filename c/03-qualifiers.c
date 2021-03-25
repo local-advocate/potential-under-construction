@@ -24,7 +24,7 @@ int main(){
     	int temp2 = 0;
  
 
-	// STATIC (access right) 
+	// STATIC (access right) [only initialize once in a func] [local pref over global]
 	static int stint1 = 10;			// cant be accessed through different file
 
 
@@ -40,9 +40,6 @@ int main(){
 	const int *const ptr4 = &conint1;	// const int const ptr. illegal ptr = &x, *ptr = x;
 
 
-	// VOLATILE
-
-
 	/* 
 	 * EXTERN (see global vars) [global variables from other file can't be accessed without extern dec]
 	 * - used to tell linker that variable is defined somewhere else (globally)
@@ -52,6 +49,15 @@ int main(){
 	//extern int extint1;			// declared in "03-qualifiers.h". defined in this file.
 	printextern();				// declared in "03-qualifiers.h". defined in 03-extern-test.c
 	
+
+	/*
+	 * VOLATILE
+	 * - keyword used to tell compiler not to optimize the following variable (value can change anytime)
+	 * - used in service routines to see if value changed (mainly used with pointers in isrs)
+	 * - also in threading to not store local copy and check volatile each time
+	 */
+	 volatile const int *volrptr = &conint1;
+
 
 	/* 
 	 * REGISTER
