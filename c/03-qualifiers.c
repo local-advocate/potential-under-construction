@@ -39,7 +39,6 @@ int main(){
 
 	const int *const ptr4 = &conint1;	// const int const ptr. illegal ptr = &x, *ptr = x;
 
-
 	/* 
 	 * EXTERN (see global vars) [global variables from other file can't be accessed without extern dec]
 	 * - used to tell linker that variable is defined somewhere else (globally)
@@ -74,6 +73,15 @@ int main(){
 	 * - mainly kept due to backwards compatibality
 	 * - used to declare variable with function (local to it) [var destroyed when out of scope]
 	 * - done automatically in c though, so no use 
-	 */  
+	 */ 
+
+
+	/*----pointers----*/	
+	/* with qualifiers:
+	 * <qualifier> <type> *<ptr> = &x	:	pointer to [x of <qualifier> <type>]
+	 * <type> <qualifier> *<ptr> = &x	:	same as above
+	 * <type> *<qualifier> <ptr> = &x	:	[<qualifier> ptr] to [x of <type>]
+	 * <qual1> <type> *<qual2> <ptr> = &x	:	[<qual2> ptr] to [x of <qual1> <type>]
+	 */
 }
 
