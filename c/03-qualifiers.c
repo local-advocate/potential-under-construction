@@ -83,5 +83,22 @@ int main(){
 	 * <type> *<qualifier> <ptr> = &x	:	[<qualifier> ptr] to [x of <type>]
 	 * <qual1> <type> *<qual2> <ptr> = &x	:	[<qual2> ptr] to [x of <qual1> <type>]
 	 */
+
+
+	/*----functions----*/
+
+	/* EXTERN
+	 * functions in current translation unit that can be used from other translation units
+	 * compiler implicitly declares/assumes it if not declared expliciltly
+	 * see 03-qualifier.h and printextern() function in line 49
+	 * definition must be global
+	 */
+
+	/* STATIC
+	 * function is only visible to the current translation unit
+	 * cannot be called from any other linked file
+	 * definition must be global
+	 */
+
 }
 
