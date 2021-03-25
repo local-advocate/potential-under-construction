@@ -10,6 +10,9 @@ int main(){
 	 * ref  : https://stackoverflow.com/questions/5103726/what-are-qualifiers-in-the-c-language
 	 * type	: signed, unsigned, short, long, long long, const, volatile, static, auto, extern, register
 	 * func : static, extern, inline, auto?
+	 *
+	 * storage classes (auto, reg, static, extern) define scope of variables/functions
+	 * they cannot be used together
 	 * data structs?
 	 */
 
@@ -50,8 +53,15 @@ int main(){
 	printextern();				// declared in "03-qualifiers.h". defined in 03-extern-test.c
 	
 
-	// REGISTER
-	
+	/* 
+	 * REGISTER
+	 * - used to tell compiler the following would be used frequently so keep it in register
+	 * - cannot be global
+	 * - multiple storage classes not allowed 
+	 */
+	register int regint1 = 10;		// register can only be local
+	register const int *regint2 = &conint1;	// illegal int x = *register (cant assign reg address)
+
 
 	/*
 	 * AUTO
