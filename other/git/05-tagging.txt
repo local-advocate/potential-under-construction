@@ -17,10 +17,19 @@
 -  tagging afterwards				:	git tag [options] <tag> {commit hash}
 
 
+=> UPDATING:
+-  git tag -f <tag> <commit_hash>		:	changes <tag> to another <commit>
+
+
 => SHARING TAGS: (not pushed by default)
--  git push <name> <tag>				:	pushes <tag> to <shortname>
+-  git push <name> <tag>			:	pushes <tag> to <shortname> (--force if fail)
 -  git push <name> --tags			:	pushes every tag to <shortname>
--  git push <name> --follow-tags			:	only pushes every annotated (no opt for only lw)
+-  git push <name> --follow-tags		:	only pushes every annotated (no opt for only lw)
+-  git push <name> :<tag>			:	pushed tag updates to remote
+
+
+=> CHECKING OUT:
+-  git checkout -b <bname> <tag>		: 	creates a branch with hist till <tag>
 
 
 => DELETING:
