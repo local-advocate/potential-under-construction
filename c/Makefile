@@ -1,7 +1,7 @@
 f1 = "01-preproc.c" 
 f2 = "02-data-types.c"
 f3 = "03-qualifiers.c" 
-f4 = "04-struction.c" 
+f4 = "04-predefDS.c" 
 
 curr = $(f4)
 
