@@ -121,6 +121,8 @@ int main(){
 	 * 	  the inline code invisible to other files
 	 *
 	 * extern inline:
+	 * 	  looks for inline functions outside of translation unit
+	 * 	  (on my machine) local inlines preferred over extern and extern never inlines (gets called)
 	 */
 	__attribute((always_inline))inline int inlfunc1(){
 		return -1;
@@ -137,5 +139,11 @@ int main(){
 	printf("static inline function returned: %d\n", inlfunc2());	// will call inlfunc2
 	printf("extern inline function returned: %d\n", inlfunc3()); 	// declared in header defined in test
 
+	/*
+	 * INLINE RESULTS (ON MY PLATFORM)
+	 * inline in my case only inlined if attributed always_inline
+	 * local inline functions preferred over extern inline ones
+	 * extern inline never got inline (even after adding always_inline attribute) [see assembly]
+	 */
 }
 

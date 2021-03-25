@@ -13,7 +13,7 @@ static inline int inlfunc2(){		// will not get called in qualifiers.c
 	return -22;
 }
 
-inline int inlfunc3(){			// definition of extern. gets called not substituted 
+__attribute((always_inline))inline int inlfunc3(){	// definition of extern. gets called not substituted 
 	return -3;
 }
 
