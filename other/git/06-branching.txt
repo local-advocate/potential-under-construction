@@ -19,5 +19,5 @@ MERGING:
 - git checkout <b>; git merge <bname>   :	first checkout to branch. merge other branch to current one.
 
 
-DELETING:
-- git branch -d <bname>			: 	deltes branch ptr
+DELETING: (tag before deleting for some ref)
+- git branch -d <bname>			: 	deltes branch ptr (use -D if not merged)
