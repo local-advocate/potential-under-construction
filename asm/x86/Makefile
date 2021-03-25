@@ -8,7 +8,7 @@ f04 = "04_addressing.asm"
 f05 = "05_loops_and_math.asm"
 tmp = "temp.asm"
 
-curr = $(f05)
+curr = $(f04)
 
 exec: 
 	nasm -f elf32 -o obj.o $(curr)

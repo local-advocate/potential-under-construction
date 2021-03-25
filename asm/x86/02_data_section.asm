@@ -1,3 +1,5 @@
+; ref: https://www.nasm.us/doc/nasmdoc3.html
+
 global _start
 
 
@@ -14,27 +16,27 @@ rpnln  equ  $ - respon
 newline db 0xA
 
 ; var-name  define-directive   value
-  abyte		db		'a'		; declare 1 byte
-  aword		dw		'ab'		; declare 1 word (2 bytes)
-  adobw		dd		2000123		; declare 1 doubleword (4 bytes)
-  aquad		dq		111.99		; declare 1 quadword (8 bytes)
-  atenb		dt		8391123.111	; declare 1 tenbyte  (10 bytes)
+  abyte:		db		'a'		; declare 1 byte
+  aword:		dw		'ab'		; declare 1 word (2 bytes)
+  adobw:		dd		2000123		; declare 1 doubleword (4 bytes)
+  aquad:		dq		111.99		; declare 1 quadword (8 bytes)
+  atenb:		dt		8391123.111	; declare 1 tenbyte  (10 bytes)
 
-intarr TIMES 10 dd 0				; array of 10 integers initialized to zero
-intarrstr db "int arr: "
-intarrstrlen equ $ - intarrstr
+intarr:       TIMES 10 dd 0				; array of 10 integers initialized to zero
+intarrstr:    db "int arr: "
+intarrstrlen: equ $ - intarrstr
 
 ;---------------bss-------------------------
 
 section .bss  					; user for variables/uninitialized data
 
-input  resb 100					; reserve 100 bytes 
+input:  resb 100					; reserve 100 bytes 
 
-byter  resb 1					; reserve 1 byte
-bytew  resw 1					; reserve 1 word
-byted  resd 1					; reserve 1 doubleword
-byteq  resq 1					; reserve 1 quadword
-bytet  rest 1					; reserve 1 tenbyte
+byter:  resb 1					; reserve 1 byte         type: BYTE  (db)
+bytew:  resw 1					; reserve 1 word         type: WORD  (dw)
+byted:  resd 1					; reserve 1 doubleword   type: DWORD (dd)
+byteq:  resq 1					; reserve 1 quadword     type: QWORD (dq)
+bytet:  rest 1					; reserve 1 tenbyte      type: TWORD (dt)
 
 ;----------------text----------------------
  	

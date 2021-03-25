@@ -34,6 +34,12 @@ _start:
 	mov esi, array					; esi = array[0] address
 	mov edi, arraylen - 1				; edi = len of arr
 
+	;--------nasm supported formats------
+	temp10: db 10					; will always evaluate to smallest repr
+	mov eax, [temp10]
+	mov eax, [ds:temp10+ebx]
+;	mov eax, [ebx*2+ecx+10]
+
 	mov eax, 4					; print "array: "
 	mov ebx, 1
 	mov ecx, temp2

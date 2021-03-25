@@ -5,15 +5,15 @@ section .data
 %assign a 10						; %assign: assign numeric constants, can be redefined
 %define b 20						; %define: same as c define directive
 
-sum equ a+b						; make constant = expression after equ
-len equ $ -sum
+sum equ a+b						; make constant = expression after equ (no change sum)
+len equ $ -sum						; $: beginning of line. $$: beginning of section
 
-sumt db  "Sum  :", 0x09
-suml equ $ - sumt
+sumt: db  "Sum  :", 0x09
+suml: equ $ - sumt
 
 
 section .bss
-bsssum resb 4
+bsssum: resb 4
 
 section .text
 
