@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "03-qualifiers.h"		// declaration of extint1
 
-int extint1 = 99;			// definition of extint1 (accessible by any file that declare it)
+int extint1 = 99;			// definition of extint1 (accessible by any file [warn if no declare])
 
 
 __attribute((always_inline))static inline int inlfunc2(){		// inline function used later
@@ -46,7 +46,7 @@ int main(){
 	const int *const ptr4 = &conint1;	// const int const ptr. illegal ptr = &x, *ptr = x;
 
 	/* 
-	 * EXTERN (see global vars) [global variables from other file can't be accessed without extern dec]
+	 * EXTERN (see global vars) [global variables from other file warn if without extern dec]
 	 * - used to tell linker that variable is defined somewhere else (globally)
 	 * - declaration (extern int x) usually done in header file
 	 * - definition (int x = f) done in one file only	
@@ -61,8 +61,8 @@ int main(){
 	 * - used in service routines to see if value changed (mainly used with pointers in isrs)
 	 * - also in threading to not store local copy and check volatile each time
 	 */
-	 volatile const int *volrptr = &conint1;
-
+	 volatile int *volrptr1 = &temp1;
+	 volatile const int *volrptr2 = &conint1; // which one is volatile being applied to ???
 
 	/* 
 	 * REGISTER
@@ -72,7 +72,7 @@ int main(){
 	 */
 	register int regint1 = 10;		// register can only be local
 	register const int *regint2 = &conint1;	// illegal int x = *register (cant assign reg address)
-
+	// ^which one is register applied to???
 
 	/*
 	 * AUTO
@@ -144,6 +144,14 @@ int main(){
 	 * inline in my case only inlined if attributed always_inline
 	 * local inline functions preferred over extern inline ones
 	 * extern inline never got inline (even after adding always_inline attribute) [see assembly]
+	 */
+
+
+	/*----data structs----*/
+
+	/*
+	 * for struct, union -> use storage class after declaration (when making a new instance)
+	 * for array , it can be used during definition
 	 */
 }
 

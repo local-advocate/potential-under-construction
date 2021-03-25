@@ -6,11 +6,11 @@ f3 = "03-qualifiers.c"
 curr = $(f2)
 
 f3:
-	gcc $(f3) 03-extern-test.c -o exec.out
+	gcc $(f3) 03-qualifiers-test.c -o exec.out
 	./exec.out
 
 dbdf3:
-	gcc -g  $(f3) 03-extern-test.c -o exec.out
+	gcc -g  $(f3) 03-qualifiers-test.c -o exec.out
 	./exec.out
 
 exec:  
