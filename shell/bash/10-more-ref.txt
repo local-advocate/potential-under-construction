@@ -1,0 +1,16 @@
+refs:
+https://guide.bash.academy/
+https://tldp.org/LDP/abs/html/special-chars.html
+
+
+FLAGS:
+* if [ -z $variable ]					: tests if $variable is null
+
+
+SPECIAL CHARS:
+* =							: assignment or a test operation (based on context)
+
+
+CONTROL CHARS:
+
+

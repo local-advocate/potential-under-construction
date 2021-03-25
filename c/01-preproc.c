@@ -15,7 +15,7 @@
 		'b', \
 		'c'
 
-#define MAXFUNC(X, Y) ((X) < (Y) ? (X) : (Y))
+#define MAXFUNC(X, Y) ((X) > (Y) ? (X) : (Y))
 
 int main(){
 	

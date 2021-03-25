@@ -76,16 +76,6 @@ _start:
 	;	mov ebx, 1
 	;	int 0x80
 		
-	print_intarr:
-		mov eax, 0x04
-		mov ebx, 1
-		mov ecx, intarrstr
-		mov edx, intarrstrlen
-		int 0x80		
-
-		mov ecx, intarr
-		mov edx, 4 
-		int 0x80
 		
 	print_newline:
 		mov eax, 0x04
