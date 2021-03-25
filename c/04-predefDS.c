@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+
+void print1darr(void *p, int size, char *type){
+	switch(type){
+		case "int":
+			p = (int *) p;
+			printf("in int\n");
+			break;
+	}
+}
+
+
+
 int main(){
 
 	/*----ARRAYS----*/
