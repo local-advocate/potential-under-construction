@@ -100,5 +100,22 @@ int main(){
 	 * definition must be global
 	 */
 
+	/* INLINE
+	 * if func is small, it can be substituted instead of making a call
+	 * inline 
+	 * 	  inline func() tells compiler if it decides to substitute func() then use inline func() code
+	 * 	  if not, then call func() from somewhere else [not the inline version]
+	 * 	  might fail sometime if only inline func() defined
+	 * 	  use __attribute((always_inline)) to force func() to be inlined [compiler still might inline
+	 * 	  any one of func() definitions]
+	 *
+	 * static inline: [still might inline or just call the func]
+	 * 	  do not look for alternate implementations
+	 * 	  use the inline function defined in current translation unit
+	 * 	  the inline code invisible to other files
+	 *
+	 * extern inline:
+	 */
+
 }
 
