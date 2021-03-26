@@ -1,3 +1,4 @@
 pdf: https://sourceware.org/gdb/current/onlinedocs/gdb.pdf
 cont: pg 
 yt : 
+how to not step and skip over function
