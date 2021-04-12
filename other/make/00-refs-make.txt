@@ -1,3 +1,5 @@
 pdf: https://www.gnu.org/software/make/manual/make.pdf
 cont: pg
 yt:
+cont: https://www.youtube.com/watch?v=Lyp36ku7D0A
+cont: https://www.youtube.com/watch?v=WFLvcMiG38w
